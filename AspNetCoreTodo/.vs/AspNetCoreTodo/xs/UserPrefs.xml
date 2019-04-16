@@ -6,15 +6,17 @@
         <State name="__root__">
           <Node name="AspNetCoreTodo" expanded="True">
             <Node name="AspNetCoreTodo" expanded="True">
-              <Node name="Dependencies" expanded="True" />
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
               <Node name="Areas" expanded="True">
                 <Node name="Identity" expanded="True">
-                  <Node name="Pages" expanded="True">
-                    <Node name="_ViewStart.cshtml" selected="True" />
-                  </Node>
+                  <Node name="Pages" expanded="True" />
                 </Node>
               </Node>
               <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="appsettings.json" selected="True" />
             </Node>
           </Node>
         </State>
