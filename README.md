@@ -1,4 +1,4 @@
-# AspNetCoreTodo
+# Asp.Net Core
 ## MySql
 ## NLog
 ## docker
