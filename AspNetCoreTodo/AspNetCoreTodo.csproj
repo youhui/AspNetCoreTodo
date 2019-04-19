@@ -9,6 +9,11 @@
 
   <ItemGroup>
     <None Remove="app.db" />
+    <None Remove="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Remove="Properties\PublishProfiles\FolderProfile 3.pubxml" />
+    <None Remove="Properties\PublishProfiles\FolderProfile 1.pubxml" />
+    <None Remove="Properties\PublishProfiles\FolderProfile 2.pubxml" />
+    <None Remove="Properties\PublishProfiles\FolderProfile 4.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
@@ -22,5 +27,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\ManageUsers\" />
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
 </Project>

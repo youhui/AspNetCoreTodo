@@ -1,21 +1,13 @@
 ﻿<Properties StartupConfiguration="{EBD3C373-85C6-48C2-BA0E-704006B6C611}|Default">
   <MonoDevelop.Ide.ItemProperties.AspNetCoreTodo PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="appsettings.Development.json">
-    <Files>
-      <File FileName="appsettings.json" Line="12" Column="1" />
-      <File FileName="appsettings.Development.json" Line="10" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="AspNetCoreTodo" expanded="True" selected="True">
+          <Node name="AspNetCoreTodo" expanded="True">
             <Node name="AspNetCoreTodo" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" />
-                <Node name="SdkDependencies" expanded="True" />
-              </Node>
-              <Node name="Data" expanded="True">
-                <Node name="Migrations" expanded="True" />
+              <Node name="Properties" expanded="True">
+                <Node name="PublishProfiles" selected="True" />
               </Node>
             </Node>
           </Node>
