@@ -7,6 +7,7 @@ using AspNetCoreTodo.Services;
 using AspNetCoreTodo.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using AspNetCoreTodo.Log;
 
 namespace AspNetCoreTodo.Controllers
 {
@@ -15,17 +16,19 @@ namespace AspNetCoreTodo.Controllers
     {
         private readonly ITodoItemService _todoItemService;
         private readonly UserManager<IdentityUser> _userManager;
+        private readonly ILoggerManager _logger;
 
-        public TodoController(ITodoItemService todoItemService, UserManager<IdentityUser> userManager)
+        public TodoController(ITodoItemService todoItemService, UserManager<IdentityUser> userManager, ILoggerManager logger)
         {
             _todoItemService = todoItemService;
             _userManager = userManager;
+            _logger = logger;
         }
 
         // 在这里添加 Actions
         public async Task<IActionResult> Index()
         {
-
+            _logger.LogDebug("TodoController.Index ...");
             var currentUser = await _userManager.GetUserAsync(User);
             if (currentUser == null) return Challenge();
 
@@ -40,9 +43,9 @@ namespace AspNetCoreTodo.Controllers
 
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddItem(TodoItem newItem)
-        { 
-        
-            if(!ModelState.IsValid)
+        {
+            _logger.LogDebug("TodoController.AddItem ...");
+            if (!ModelState.IsValid)
             {
                 return RedirectToAction("Index");
             }
@@ -63,6 +66,7 @@ namespace AspNetCoreTodo.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> MarkDone(Guid id)
         {
+            _logger.LogDebug("TodoController.MarkDone ...");
             if (id == Guid.Empty)
             {
                 return RedirectToAction("Index");
